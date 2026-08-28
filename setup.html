@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRC - Account Setup & Application</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <img src="/assets/image/grc-logo.png" alt="GRC Logo" class="brand-logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- NAVIGATION SIDEBAR MENU -->
+  <div class="sidebar-overlay hidden" id="sidebarOverlay"></div>
+  <aside class="sidebar hidden" id="sidebarMenu">
+    <div class="user-profile-section">
+      <div class="avatar-circle">👤</div>
+      <div class="user-details">
+        <h3>Juan Dela Cruz</h3>
+        <p>juandelacruz@gmail.com</p>
+      </div>
+    </div>
+    <hr class="divider">
+    <nav class="sidebar-links">
+      <a href="#" class="sidebar-item">✉ Report a problem</a>
+      <a href="#" class="sidebar-item">📋 My Application</a>
+      <a href="index.html" class="sidebar-item logout">⎋ Log Out</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTAINER -->
+  <main class="app-container">
+
+    <!-- STEP 1: SET-UP YOUR ACCOUNT -->
+    <section class="step-card" id="stepAccountSetup">
+      <h1 class="page-title red-title">SET-UP YOUR ACCOUNT</h1>
+      <form class="form-grid">
+        <div class="form-group">
+          <label>Last Name:</label>
+          <input type="text" class="form-control" placeholder="e.g Delacruz" required>
+        </div>
+        <div class="form-group">
+          <label>Given Name:</label>
+          <input type="text" class="form-control" placeholder="e.g Juan" required>
+        </div>
+        <div class="form-group">
+          <label>Middle Name:</label>
+          <input type="text" class="form-control" placeholder="Optional">
+        </div>
+        <div class="form-group">
+          <label>Create Password:</label>
+          <input type="password" class="form-control" placeholder="••••••••••••" required>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password:</label>
+          <input type="password" class="form-control" placeholder="••••••••••••" required>
+        </div>
+        <button type="button" class="btn-primary btn-block" id="btnNextToInfo">NEXT</button>
+      </form>
+    </section>
+
+    <!-- STEP 2: STUDENT INFORMATION -->
+    <section class="step-card hidden" id="stepStudentInfo">
+      <h1 class="page-title red-title">STUDENT INFORMATION</h1>
+      <form class="form-grid">
+        <div class="form-group">
+          <label>Sex:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="sex" value="Male" checked> Male</label>
+            <label><input type="radio" name="sex" value="Female"> Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Birthday:</label>
+          <input type="date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number:</label>
+          <div class="phone-input-group">
+            <span class="phone-prefix">+63</span>
+            <input type="tel" class="form-control" placeholder="9123456789">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Country:</label>
+          <div class="static-field">🇵🇭 Philippines</div>
+        </div>
+        <div class="form-group">
+          <label>Region:</label>
+          <select class="form-control"><option>NCR</option></select>
+        </div>
+        <div class="form-group">
+          <label>City / Municipality:</label>
+          <select class="form-control"><option>Caloocan</option><option>Malabon</option></select>
+        </div>
+        <div class="form-group">
+          <label>Barangay:</label>
+          <select class="form-control"><option>Brgy 81</option></select>
+        </div>
+        <div class="form-group">
+          <label>Street Address:</label>
+          <input type="text" class="form-control" placeholder="Street Address" required>
+        </div>
+        <div class="form-group">
+          <label>Guardian’s Name:</label>
+          <input type="text" class="form-control" placeholder="e.g. Maria D. Bee" required>
+        </div>
+        <div class="form-group">
+          <label>Guardian’s Phone Number:</label>
+          <div class="phone-input-group">
+            <span class="phone-prefix">+63</span>
+            <input type="tel" class="form-control" placeholder="9987654321" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" required> I agree to <a href="#" class="red-link">Terms & Conditions</a></label>
+        </div>
+        <button type="button" class="btn-primary btn-block" id="btnGoToUploads">Go to Student Dashboard</button>
+      </form>
+    </section>
+
+    <!-- STEP 3: UPLOAD DOCUMENTS -->
+    <section class="step-card hidden" id="stepUploadDocs">
+      <h1 class="page-title"><span class="red-text">Upload</span> Documents</h1>
+      <p class="subtitle">In this page, please fill all the information needed to book an entrance exam.</p>
+
+      <div class="upload-list">
+        <div class="upload-item">
+          <label class="bold">1) Formal 138 (Grade 12 Report Card):</label>
+          <input type="file" class="form-control" accept=".jpg,.jpeg,.png">
+        </div>
+        <div class="upload-item">
+          <label class="bold">2) Good Moral Certificate:</label>
+          <input type="file" class="form-control" accept=".jpg,.jpeg,.png">
+        </div>
+        <div class="upload-item">
+          <label class="bold">3) 2x2 Picture:</label>
+          <input type="file" class="form-control" accept=".jpg,.jpeg,.png">
+        </div>
+      </div>
+
+      <div class="action-right mt-3">
+        <button type="button" class="btn-primary btn-sm" id="btnGoToSchedule">APPLY</button>
+      </div>
+    </section>
+
+    <!-- STEP 4: SCHEDULE ME -->
+    <section class="step-card hidden" id="stepSchedule">
+      <h1 class="page-title"><span class="red-text">Schedule</span> Me</h1>
+      <p class="subtitle">Look for available slots and apply.</p>
+
+      <div class="schedule-controls-grid">
+        <div class="control-box">
+          <label class="bold">Select Day</label>
+          <select class="form-control"><option>15</option></select>
+
+          <label class="bold mt-3">Select Batch</label>
+          <select class="form-control"><option>1 (7:30 AM)</option></select>
+        </div>
+
+        <div class="summary-box">
+          <h3>SCHEDULE SUMMARY</h3>
+          <p><strong>Month:</strong> April</p>
+          <p><strong>Exam Day:</strong> 15</p>
+          <p><strong>Year:</strong> 2026</p>
+          <p><strong>Batch:</strong> 1</p>
+          <p><strong>Time:</strong> 7:30 AM</p>
+        </div>
+      </div>
+
+      <div class="action-right mt-4">
+        <button type="button" class="btn-primary btn-sm" id="btnSaveSchedule">SAVE</button>
+      </div>
+    </section>
+
+    <!-- STEP 5: STATEMENT OF APPLICATION -->
+    <section class="step-card hidden printable-card" id="stepStatement">
+      <div class="no-print action-right mb-3">
+        <button class="btn-primary btn-sm" onclick="window.print()">Print Document</button>
+      </div>
+      <div class="soa-header">
+        <img src="/assets/image/grc-logo.png" alt="GRC Logo" class="soa-logo">
+        <div>
+          <h2>Global Reciprocal Colleges</h2>
+          <p>Caloocan, Metro Manila</p>
+        </div>
+      </div>
+      <hr>
+      <div class="soa-body mt-3">
+        <h3>Statement of Application</h3>
+        <p><strong>APPLICANT:</strong> Delacruz, Juan</p>
+        <p><strong>Applicant ID:</strong> 012345</p>
+        <p><strong>Exam Date:</strong> April 15, 2026 | 7:30 AM</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRC - Upload Files</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar-circle"><i class="bi bi-person-fill"></i></div>
+        <div class="user-info">
+          <h3>Juan Dela Cruz</h3>
+          <span class="user-role">Applicant</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li ><a href="dashboard.html"><i class="bi bi-house-door-fill"></i> <span>Dashboard / Setup</span></a></li>
+          <li class="active"><a href="upload-files.html"><i class="bi bi-file-earmark-arrow-up-fill"></i> <span>Upload Files</span></a></li>
+          <li ><a href="schedule-exam.html"><i class="bi bi-calendar-event-fill"></i> <span>Schedule Exam</span></a></li>
+          <li ><a href="print-files.html"><i class="bi bi-printer-fill"></i> <span>Print Files (SOA)</span></a></li>
+          <li ><a href="report-problem.html"><i class="bi bi-envelope-fill"></i> <span>Report a Problem</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logoutBtn" class="logout-link"><i class="bi bi-box-arrow-left"></i> <span>Log Out</span></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      
+      <header class="welcome-banner">
+        <h2>Upload Requirements</h2>
+        <p>Upload soft copies of your requirements for application verification.</p>
+      </header>
+      <div class="card">
+        <h3 class="card-title">Document Attachments</h3>
+        <form id="uploadForm">
+          <div class="form-group">
+            <label>Form 138 / Grade 12 Card:</label>
+            <input type="file" class="form-control" accept="image/*,.pdf" required />
+          </div>
+          <div class="form-group">
+            <label>Certificate of Good Moral Character:</label>
+            <input type="file" class="form-control" accept="image/*,.pdf" required />
+          </div>
+          <div class="form-group">
+            <label>PSA Birth Certificate:</label>
+            <input type="file" class="form-control" accept="image/*,.pdf" required />
+          </div>
+          <button type="submit" class="btn-submit">Upload Documents</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="js/sidebar.js"></script>
+</body>
+</html>

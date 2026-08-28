@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRC - Schedule Exam</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar-circle"><i class="bi bi-person-fill"></i></div>
+        <div class="user-info">
+          <h3>Juan Dela Cruz</h3>
+          <span class="user-role">Applicant</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li ><a href="dashboard.html"><i class="bi bi-house-door-fill"></i> <span>Dashboard / Setup</span></a></li>
+          <li ><a href="upload-files.html"><i class="bi bi-file-earmark-arrow-up-fill"></i> <span>Upload Files</span></a></li>
+          <li class="active"><a href="schedule-exam.html"><i class="bi bi-calendar-event-fill"></i> <span>Schedule Exam</span></a></li>
+          <li ><a href="print-files.html"><i class="bi bi-printer-fill"></i> <span>Print Files (SOA)</span></a></li>
+          <li ><a href="report-problem.html"><i class="bi bi-envelope-fill"></i> <span>Report a Problem</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logoutBtn" class="logout-link"><i class="bi bi-box-arrow-left"></i> <span>Log Out</span></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      
+      <header class="welcome-banner">
+        <h2>Schedule Entrance Exam</h2>
+        <p>Pick a date and time slot for your exam.</p>
+      </header>
+      <div class="card">
+        <h3 class="card-title">Select Examination Date</h3>
+        <form id="scheduleForm">
+          <div class="form-group">
+            <label for="examDate">Available Slots:</label>
+            <select id="examDate" class="form-control" required>
+              <option value="">-- Choose Exam Date --</option>
+              <option value="May 15, 2026 - 9:00 AM">May 15, 2026 (09:00 AM - 11:00 AM)</option>
+              <option value="May 15, 2026 - 1:00 PM">May 15, 2026 (01:00 PM - 03:00 PM)</option>
+              <option value="May 20, 2026 - 9:00 AM">May 20, 2026 (09:00 AM - 11:00 AM)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Testing Venue:</label>
+            <input type="text" class="form-control" value="GRC Main Campus - Computer Lab 1" readonly />
+          </div>
+          <button type="submit" class="btn-submit">Confirm Slot</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="js/sidebar.js"></script>
+</body>
+</html>

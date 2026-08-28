@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statement of Application (SOApp)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .soappCard {
+      padding: 20px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .soappHeader {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .qrPlaceholder {
+      width: 80px;
+      height: 80px;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="background: white;">
+    <div class="soappCard">
+      <div class="soappHeader">
+        <img src="/assets/image/grc-logo.png" style="height: 40px;" alt="Logo">
+        <div>
+          <strong>Global Reciprocal Colleges</strong><br>
+          GRC Bldg. 454, 1400 Rizal Ave Ext, Caloocan
+        </div>
+      </div>
+
+      <hr style="margin: 15px 0;">
+
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <h3>Statement of Application</h3>
+          <p>APPLICANT: Delacruz, Juan</p>
+          <p>SCHOOL YEAR: 2025-2026</p>
+        </div>
+        <div class="qrPlaceholder">QR CODE</div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <p><strong>Exam Schedule:</strong> April 15, 2026 | 7:30 AM</p>
+        <p><strong>Exam Facility:</strong> COMLAB1 2F</p>
+      </div>
+
+      <button onclick="window.print()" class="btnPrimary" style="margin-top: 30px;">Print / Download SOApp</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fullscreen Landing Page background */
+.grc-hero-bg {
+  width: 100vw;
+  height: 100vh;
+  
+  /* 
+     1. GRC Dark Maroon overlay (nagbibigay ng opisyal na kulay at ginagawang readable ang text)
+     2. Totoong Image URL sa internet (Unsplash / Live CDN)
+  */
+  background-image: 
+    linear-gradient(
+      rgba(103, 0, 0, 0.78), 
+      rgba(20, 0, 0, 0.88)
+    ), 
+    url('/assets/image/grc-campus.png');
+
+  /* Background Positioning & Scaling */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Container Box sa gitna ng Screen */
+.hero-content {
+  color: #ffffff;
+  padding: 30px;
+  max-width: 750px;
+  width: 90%;
+}
+
+.grc-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.hero-content h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Primary Action Button */
+.btn-grc {
+  background-color: #ffffff;
+  color: #670000;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+.btn-grc:hover {
+  background-color: #ffe6e6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments sa Mobile */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .grc-logo {
+    width: 85px;
+  }
+}
